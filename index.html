@@ -1,0 +1,2032 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Salon Be Beauty — Eliška Hanzlová | Roudnice nad Labem</title>
+<meta name="description" content="Salon Be Beauty v Roudnici nad Labem — luxusní kosmetická péče, ošetření LARENS, maderoterapie obličeje a svatební líčení. Individuální přístup Elišky Hanzlové." />
+
+<!-- Sociální náhledy (WhatsApp, Instagram, Facebook, Messenger...) -->
+<!-- TODO: po nasazení na ostrou doménu nahraďte og:url a og:image skutečnou adresou -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Salon Be Beauty" />
+<meta property="og:title" content="Salon Be Beauty — Eliška Hanzlová | Roudnice nad Labem" />
+<meta property="og:description" content="Luxusní kosmetická péče, ošetření LARENS, maderoterapie a svatební líčení v srdci Roudnice nad Labem." />
+<meta property="og:image" content="images/hero-cover.jpg" />
+<meta property="og:locale" content="cs_CZ" />
+<meta property="og:url" content="https://www.salonbebeauty.cz/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Salon Be Beauty — Eliška Hanzlová" />
+<meta name="twitter:description" content="Luxusní kosmetická péče v Roudnici nad Labem — LARENS, maderoterapie, svatební líčení." />
+
+<!-- Strukturovaná data pro Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Salon Be Beauty — Eliška Hanzlová",
+  "image": "images/hero-cover.jpg",
+  "telephone": "+420722241139",
+  "email": "kosmeticke.sluzby@post.cz",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Alej 17. listopadu 1101",
+    "addressLocality": "Roudnice nad Labem",
+    "postalCode": "413 01",
+    "addressCountry": "CZ"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:30", "closes": "19:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/salon_bebeauty/"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "8",
+    "bestRating": "5"
+  }
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.85em' font-size='84'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --cream:#fbf7f3;
+    --cream-deep:#f5ebe6;
+    --panel:rgba(43,36,32,0.035);
+    --panel-strong:rgba(43,36,32,0.06);
+    --border:rgba(43,36,32,0.10);
+    --border-strong:rgba(43,36,32,0.18);
+    --ink:#2b2420;
+    --ink-dim:#7a6f68;
+    --rose:#d9a79a;
+    --rose-soft:#f2dad2;
+    --rose-deep:#c08a7c;
+    --gold:#b9935f;
+    --gold-light:#e3c898;
+    --status-open:#7a9b76;
+    --status-closed:#c17a6a;
+    --shadow: 0 30px 70px -32px rgba(43,36,32,0.22);
+    --radius-lg:26px;
+    --radius-md:16px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Jost', ui-sans-serif, system-ui, sans-serif;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  h1,h2,h3{ text-wrap:balance; margin:0; font-family:'Cormorant Garamond', serif; font-weight:600; }
+  p{ text-wrap:pretty; margin:0; }
+  a{ color:inherit; }
+  img{ display:block; max-width:100%; }
+  button{ font-family:inherit; }
+
+  ::selection{ background:var(--rose); color:#fff; }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding-left:clamp(20px,5vw,56px); padding-right:clamp(20px,5vw,56px); position:relative; z-index:1; }
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+  .reveal.in-view{ opacity:1; transform:translateY(0); }
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    padding:15px 30px;
+    border-radius:999px;
+    font-family:'Jost', sans-serif;
+    font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; font-weight:500;
+    text-decoration:none; white-space:nowrap; cursor:pointer;
+    background:linear-gradient(135deg, var(--rose), var(--rose-deep));
+    color:#fff;
+    border:1px solid transparent;
+    transition:transform .2s cubic-bezier(.2,.9,.3,1.3), filter .15s ease, box-shadow .25s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); filter:brightness(1.04); box-shadow:0 18px 34px -16px rgba(192,138,124,0.55); }
+  .btn:focus-visible{ outline:2px solid var(--rose-deep); outline-offset:3px; }
+  .btn.ghost{
+    background:transparent; color:var(--ink); border-color:var(--border-strong);
+  }
+  .btn.ghost:hover{ background:var(--panel); box-shadow:none; }
+
+  /* ---------- topbar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:40;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px;
+    padding:18px clamp(20px,5vw,56px);
+    background:rgba(251,247,243,0.6);
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, background .3s ease, padding .3s ease;
+  }
+  .topbar.scrolled{ border-color:var(--border); background:rgba(251,247,243,0.92); padding-top:12px; padding-bottom:12px; }
+  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .brand .mark{
+    width:40px; height:40px; border-radius:50%; flex:none;
+    background:#fff;
+    box-shadow:0 4px 18px -4px rgba(185,147,95,0.5);
+    object-fit:cover;
+    border:1px solid var(--border);
+  }
+  .brand .name{ display:flex; flex-direction:column; line-height:1.15; }
+  .brand .name b{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:20px; letter-spacing:0.01em; color:var(--ink); }
+  .brand .name small{ font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-top:1px; }
+
+  .topbar nav{ display:flex; align-items:center; gap:clamp(18px,2.6vw,32px); }
+  .topbar nav a{
+    font-size:12.5px; letter-spacing:0.07em; text-transform:uppercase;
+    text-decoration:none; color:var(--ink-dim);
+    transition:color .15s ease;
+  }
+  .topbar nav a:hover, .topbar nav a:focus-visible{ color:var(--rose-deep); }
+  .topbar nav a.cta-link{
+    color:#fff; background:linear-gradient(135deg, var(--rose), var(--rose-deep)); padding:11px 22px; border-radius:999px; font-weight:500;
+  }
+  .topbar nav a.cta-link:hover{ filter:brightness(1.05); }
+
+  .menu-btn{ display:none; background:none; border:none; cursor:pointer; padding:6px; }
+  .menu-btn span{ display:block; width:22px; height:1.5px; background:var(--ink); margin:5px 0; transition:transform .2s ease, opacity .2s ease; }
+
+  @media (max-width:920px){
+    .topbar nav a:not(.cta-link){ display:none; }
+    .menu-btn{ display:block; }
+  }
+  @media (max-width:560px){
+    .topbar nav a.cta-link{ display:none; }
+  }
+
+  /* ---------- mobile drawer ---------- */
+  .drawer{
+    position:fixed; inset:0; z-index:60;
+    background:rgba(251,247,243,0.98);
+    backdrop-filter:blur(10px);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:30px;
+    opacity:0; pointer-events:none; transition:opacity .25s ease;
+  }
+  .drawer.open{ opacity:1; pointer-events:auto; }
+  .drawer a{ font-family:'Cormorant Garamond',serif; font-size:30px; text-decoration:none; color:var(--ink); }
+  .drawer .close{ position:absolute; top:22px; right:clamp(20px,5vw,40px); background:none; border:none; font-size:28px; cursor:pointer; color:var(--ink); line-height:1; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    min-height:min(94vh,860px);
+    display:flex; align-items:center;
+    isolation:isolate;
+    overflow:hidden;
+    background:
+      radial-gradient(1000px 640px at 86% -10%, rgba(242,218,210,0.9), transparent 60%),
+      radial-gradient(820px 560px at 4% 112%, rgba(227,200,152,0.35), transparent 62%),
+      linear-gradient(170deg, #fdfaf7 0%, #fbf3ee 40%, #f5e6de 72%, #efdcd0 100%);
+  }
+  .hero-petal{ position:absolute; z-index:1; border-radius:50% 50% 50% 4%; background:linear-gradient(135deg, var(--rose-soft), var(--rose)); opacity:0.5; pointer-events:none; filter:blur(0.5px); }
+  .hero-photo{ position:absolute; z-index:1; border-radius:50% 50% 48% 6%; overflow:hidden; pointer-events:none; box-shadow:0 40px 80px -30px rgba(43,36,32,0.35); }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  @media (max-width:760px){ .hero-photo{ display:none; } }
+
+  .hero-inner{ position:relative; z-index:2; padding:clamp(110px,15vw,150px) 0 clamp(56px,8vw,80px); width:100%; }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:11.5px; letter-spacing:0.32em; text-transform:uppercase;
+    color:var(--rose-deep); font-weight:500;
+  }
+  .hero-eyebrow::before{ content:""; width:26px; height:1px; background:var(--rose-deep); opacity:0.8; }
+  .hero h1{
+    margin-top:20px;
+    font-weight:600;
+    font-size:clamp(44px,7.4vw,86px);
+    line-height:1.04;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+    max-width:16ch;
+  }
+  .hero h1 em{ font-style:italic; color:var(--rose-deep); }
+  .hero-lead{
+    margin-top:24px;
+    max-width:48ch;
+    font-size:clamp(15.5px,1.6vw,17.5px);
+    line-height:1.75;
+    color:var(--ink-dim);
+    font-weight:300;
+  }
+  .hero-ctas{ margin-top:36px; display:flex; flex-wrap:wrap; gap:14px; }
+
+  .hero-stats{ margin-top:56px; display:flex; flex-wrap:wrap; gap:clamp(28px,4.5vw,52px); }
+  .hero-stat b{ display:block; font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(26px,2.8vw,34px); color:var(--ink); }
+  .hero-stat span{ display:block; margin-top:4px; font-size:12px; letter-spacing:0.04em; color:var(--ink-dim); }
+
+  /* ---------- quick info bar ---------- */
+  .quickbar{ padding:0; background:#fff; border-bottom:1px solid var(--border); position:relative; z-index:1; }
+  .quickbar-grid{ display:grid; grid-template-columns:repeat(4,1fr); }
+  .qb-item{
+    display:flex; align-items:center; gap:13px;
+    padding:22px clamp(14px,2vw,22px);
+    border-right:1px solid var(--border);
+    text-decoration:none; color:var(--ink);
+    transition:background .15s ease;
+  }
+  a.qb-item:hover{ background:var(--panel); }
+  .qb-item:last-child{ border-right:none; }
+  .qb-item svg{ flex:none; color:var(--gold); }
+  .qb-item b{ display:block; font-size:13px; font-weight:500; line-height:1.3; }
+  .qb-item small{ display:block; font-size:11.5px; color:var(--ink-dim); margin-top:2px; }
+  .qb-item .dot{ width:9px; height:9px; border-radius:50%; flex:none; background:var(--ink-dim); }
+  .qb-item.open .dot{ background:var(--status-open); box-shadow:0 0 0 3px rgba(122,155,118,0.22); }
+  .qb-item.closed .dot{ background:var(--status-closed); box-shadow:0 0 0 3px rgba(193,122,106,0.2); }
+  @media (max-width:900px){
+    .quickbar-grid{ grid-template-columns:repeat(2,1fr); }
+    .qb-item:nth-child(odd){ border-right:1px solid var(--border); }
+    .qb-item:nth-child(even){ border-right:none; }
+    .qb-item:nth-child(n+3){ border-top:1px solid var(--border); }
+  }
+
+  /* ---------- mobile action bar ---------- */
+  .mobile-bar{ display:none; }
+  @media (max-width:760px){
+    body{ padding-bottom:78px; }
+    .mobile-bar{
+      display:flex; position:fixed; left:0; right:0; bottom:0; z-index:50;
+      gap:8px;
+      background:rgba(255,255,255,0.95); backdrop-filter:blur(14px); border-top:1px solid var(--border);
+      padding:10px max(10px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-right));
+    }
+    .mobile-bar a{
+      flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+      text-decoration:none; color:var(--ink);
+      font-size:10.5px; letter-spacing:0.03em; text-transform:uppercase; font-weight:500;
+      padding:8px 4px; border-radius:12px;
+      border:1px solid var(--border);
+    }
+    .mobile-bar a.primary{ background:linear-gradient(135deg, var(--rose), var(--rose-deep)); border-color:transparent; color:#fff; }
+  }
+
+  /* ---------- section basics (placeholder for upcoming sections) ---------- */
+  section{ padding:clamp(64px,10vw,116px) 0; position:relative; z-index:1; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
+    color:var(--gold); font-weight:600;
+  }
+  .eyebrow::before{ content:""; width:22px; height:1px; background:var(--gold); }
+  section h2{ font-size:clamp(30px,4.2vw,44px); margin-top:14px; letter-spacing:-0.01em; }
+
+  .chips{ margin-top:32px; display:flex; flex-wrap:wrap; gap:10px; }
+  .chip{
+    display:inline-flex; align-items:center; gap:7px;
+    font-size:12.5px; letter-spacing:0.02em;
+    padding:10px 17px; border-radius:999px;
+    border:1px solid var(--border-strong); color:var(--ink-dim);
+    background:#fff;
+  }
+
+  /* ---------- about ---------- */
+  .about{ background:#fff; }
+  .about-grid{ display:grid; grid-template-columns:0.82fr 1.18fr; gap:clamp(40px,6vw,88px); align-items:center; }
+  .about-media{ position:relative; }
+  .about-frame{ position:relative; aspect-ratio:4/5; border-radius:var(--radius-lg); overflow:hidden; background:var(--cream-deep); }
+  .about-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; }
+  .about-ring{ position:absolute; inset:18px; border:1px solid rgba(255,255,255,0.55); border-radius:18px; pointer-events:none; }
+  .about-badge{
+    position:absolute; bottom:-22px; right:-18px;
+    background:#fff; border-radius:50%;
+    width:118px; height:118px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    box-shadow:var(--shadow); text-align:center;
+  }
+  .about-badge b{ font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:700; color:var(--rose-deep); }
+  .about-badge span{ font-size:10px; letter-spacing:0.03em; color:var(--ink-dim); line-height:1.3; margin-top:2px; }
+  .about-quote{ margin-top:18px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(19px,2.2vw,23px); color:var(--rose-deep); line-height:1.5; max-width:34ch; }
+  .about-text{ margin-top:18px; font-size:15.5px; line-height:1.8; color:var(--ink-dim); max-width:52ch; font-weight:300; }
+  .about-points{ margin-top:30px; display:flex; flex-direction:column; gap:14px; }
+  .about-point{ display:flex; align-items:baseline; gap:14px; font-size:14.5px; color:var(--ink); padding-top:14px; border-top:1px solid var(--border); }
+  .about-point .num{ font-family:'Cormorant Garamond',serif; font-weight:700; color:var(--gold); font-size:15px; }
+  @media (max-width:860px){ .about-grid{ grid-template-columns:1fr; } .about-media{ max-width:340px; margin:0 auto 20px; } }
+
+  /* ---------- services ---------- */
+  .services{ background:var(--cream-deep); }
+  .services-head{ max-width:640px; }
+  .services-lead{ margin-top:16px; font-size:15.5px; line-height:1.75; color:var(--ink-dim); font-weight:300; }
+  .services-grid{
+    margin-top:clamp(40px,5.5vw,56px);
+    display:grid; grid-template-columns:repeat(3,1fr);
+    gap:clamp(22px,3vw,28px);
+  }
+  .service-card{
+    background:#fff; border-radius:var(--radius-md); padding:clamp(26px,3vw,34px);
+    border:1px solid var(--border); display:flex; flex-direction:column;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .service-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
+  .service-ic{
+    width:52px; height:52px; border-radius:50%; flex:none;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--rose-soft); color:var(--rose-deep);
+  }
+  .service-card h3{ margin-top:20px; font-size:21px; font-weight:700; }
+  .service-card p{ margin-top:10px; font-size:14px; line-height:1.7; color:var(--ink-dim); font-weight:300; }
+  .service-list{ margin:18px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px; }
+  .service-list li{ font-size:13px; color:var(--ink); padding-left:18px; position:relative; }
+  .service-list li::before{ content:""; position:absolute; left:0; top:7px; width:7px; height:7px; border-radius:50%; background:var(--gold); }
+  .service-link{ margin-top:22px; display:inline-flex; font-size:12.5px; letter-spacing:0.05em; text-decoration:none; color:var(--rose-deep); font-weight:500; }
+  .service-link:hover{ color:var(--ink); }
+  @media (max-width:900px){ .services-grid{ grid-template-columns:1fr; } }
+
+  .services-extra{ margin-top:34px; display:flex; flex-wrap:wrap; gap:10px; }
+  .chip-new{ background:linear-gradient(135deg, var(--rose), var(--rose-deep)); color:#fff; border-color:transparent; text-decoration:none; font-weight:500; }
+  .chip-new:hover{ filter:brightness(1.05); }
+
+  /* ---------- detailed pricing ---------- */
+  .pricing{ margin-top:clamp(48px,6vw,64px); }
+  .pricing-tabs{ display:flex; flex-wrap:wrap; gap:10px; border-bottom:1px solid var(--border); padding-bottom:clamp(20px,3vw,26px); }
+  .pricing-tab{
+    font-family:'Jost', sans-serif; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase; font-weight:500;
+    padding:11px 20px; border-radius:999px; border:1px solid var(--border-strong);
+    background:#fff; color:var(--ink-dim); cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .pricing-tab:hover{ color:var(--ink); }
+  .pricing-tab.is-active{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  .pricing-panel{ display:none; margin-top:clamp(24px,3.5vw,34px); }
+  .pricing-panel.is-active{ display:block; }
+  .price-row{
+    display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+    padding:16px 0; border-bottom:1px solid var(--border);
+  }
+  .price-row:first-child{ padding-top:0; }
+  .price-row-main{ display:flex; flex-direction:column; gap:4px; flex:1; min-width:0; }
+  .price-row-top{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .price-row-top b{ font-size:15.5px; font-weight:600; color:var(--ink); }
+  .price-row-dur{ font-size:11.5px; color:var(--gold); letter-spacing:0.03em; white-space:nowrap; }
+  .price-row-dur::before{ content:"· "; }
+  .price-row-note{ font-size:13px; color:var(--ink-dim); line-height:1.6; font-weight:300; max-width:60ch; }
+  .price-row-amount{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:19px; color:var(--rose-deep); white-space:nowrap; flex:none; }
+
+  .wedding-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  .wedding-card{ background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:24px 20px; display:flex; flex-direction:column; }
+  .wedding-card.is-popular{ border-color:var(--rose-deep); box-shadow:0 20px 50px -24px rgba(192,138,124,0.45); position:relative; }
+  .wedding-card.is-popular::before{ content:"Nejoblíbenější"; position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg, var(--rose), var(--rose-deep)); color:#fff; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; padding:5px 14px; border-radius:999px; white-space:nowrap; }
+  .wedding-card h4{ font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:700; }
+  .wedding-card .wc-price{ margin-top:6px; font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:700; color:var(--rose-deep); }
+  .wedding-card ul{ margin:16px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px; flex:1; }
+  .wedding-card li{ font-size:12.5px; line-height:1.55; color:var(--ink-dim); padding-left:17px; position:relative; }
+  .wedding-card li::before{ content:""; position:absolute; left:0; top:6px; width:6px; height:6px; border-radius:50%; background:var(--gold); }
+  @media (max-width:900px){ .wedding-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .wedding-grid{ grid-template-columns:1fr; } .price-row{ flex-direction:column; align-items:flex-start; gap:6px; } .price-row-amount{ font-size:17px; } }
+
+  .pricing-note{ margin-top:28px; font-size:12px; color:var(--ink-dim); font-style:italic; }
+
+  /* ---------- why us ---------- */
+  .why{ background:#fff; }
+  .why-head{ max-width:640px; }
+  .why-grid{
+    margin-top:clamp(36px,5.5vw,56px);
+    display:grid; grid-template-columns:repeat(4,1fr);
+    gap:clamp(28px,4vw,36px) 24px;
+  }
+  .why-item{ padding-top:20px; border-top:1px solid var(--border); }
+  .why-item .ic{ width:40px; height:40px; display:flex; align-items:center; justify-content:center; color:var(--gold); }
+  .why-item h3{ margin-top:16px; font-size:19px; font-weight:700; }
+  .why-item p{ margin-top:8px; font-size:13.5px; line-height:1.65; color:var(--ink-dim); font-weight:300; }
+  @media (max-width:860px){ .why-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:520px){ .why-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- before / after slider ---------- */
+  .before-after{ background:#fff; }
+  .ba-head{ max-width:640px; margin:0 auto; text-align:center; }
+  .ba-lead{ margin-top:16px; font-size:15.5px; line-height:1.75; color:var(--ink-dim); font-weight:300; }
+  .ba-slider{
+    --ba-pos:50%;
+    position:relative;
+    max-width:420px;
+    margin:clamp(32px,5vw,48px) auto 0;
+    aspect-ratio:472/960;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    background:var(--cream-deep);
+  }
+  .ba-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; -webkit-user-drag:none; user-select:none; }
+  .ba-before-wrap{ position:absolute; inset:0; clip-path:inset(0 calc(100% - var(--ba-pos)) 0 0); will-change:clip-path; }
+  .ba-divider{ position:absolute; top:0; bottom:0; left:var(--ba-pos); width:2px; background:rgba(255,255,255,0.85); transform:translateX(-50%); pointer-events:none; box-shadow:0 0 0 1px rgba(43,36,32,0.12); }
+  .ba-handle{
+    position:absolute; top:50%; left:var(--ba-pos); width:46px; height:46px;
+    transform:translate(-50%,-50%);
+    border-radius:50%; background:#fff;
+    display:flex; align-items:center; justify-content:center; gap:3px;
+    box-shadow:0 10px 26px -8px rgba(43,36,32,0.45);
+    cursor:ew-resize; touch-action:none;
+    border:1px solid var(--border);
+  }
+  .ba-handle svg{ color:var(--rose-deep); }
+  .ba-handle:focus-visible{ outline:2px solid var(--rose-deep); outline-offset:3px; }
+  .ba-slider.dragging .ba-handle{ box-shadow:0 10px 30px -6px rgba(43,36,32,0.55); }
+  .ba-label{
+    position:absolute; top:16px; z-index:3;
+    font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:600;
+    color:#fff; background:rgba(43,36,32,0.55); backdrop-filter:blur(6px);
+    padding:7px 13px; border-radius:999px; pointer-events:none;
+  }
+  .ba-label-before{ left:16px; }
+  .ba-label-after{ right:16px; }
+  .ba-caption{ margin:20px auto 0; max-width:420px; text-align:center; font-size:13px; color:var(--ink-dim); }
+
+  /* ---------- gift voucher ---------- */
+  .voucher{ background:linear-gradient(135deg, var(--rose-soft) 0%, var(--cream-deep) 60%); }
+  .voucher-inner{ display:flex; align-items:center; gap:clamp(20px,3.5vw,36px); flex-wrap:wrap; justify-content:center; text-align:center; }
+  .voucher-ic{
+    width:64px; height:64px; border-radius:50%; flex:none;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff; color:var(--rose-deep); box-shadow:var(--shadow);
+  }
+  .voucher-copy{ max-width:540px; }
+  .voucher-copy p{ margin-top:12px; font-size:14.5px; line-height:1.7; color:var(--ink-dim); font-weight:300; }
+  .voucher-btn{ flex:none; }
+  @media (max-width:760px){ .voucher-inner{ flex-direction:column; text-align:center; } }
+
+  /* ---------- gallery ---------- */
+  .gallery{ background:#fff; }
+  .gallery-head{ max-width:640px; }
+  .gallery-lead{ margin-top:16px; font-size:15.5px; line-height:1.75; color:var(--ink-dim); font-weight:300; }
+  .gallery-stage{ width:100%; height:560px; position:relative; margin-top:clamp(28px,4vw,44px); }
+  .gallery-stage #cc-root{ width:100%; height:100%; position:relative; }
+  .gallery-stage .cc-fallback{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--ink-dim); font-size:13px; letter-spacing:0.04em; }
+  @media (max-width:640px){ .gallery-stage{ height:480px; } }
+
+  /* ---------- reviews ---------- */
+  .reviews{ background:var(--cream-deep); }
+  .reviews-head{ max-width:640px; }
+  .rating-badge{ margin-top:18px; display:inline-flex; align-items:center; gap:10px; font-size:14px; color:var(--ink-dim); }
+  .rating-badge .stars{ color:var(--gold); letter-spacing:2px; font-size:16px; }
+  .rating-badge b{ color:var(--ink); font-family:'Cormorant Garamond',serif; font-size:18px; }
+  .reviews-grid{ margin-top:clamp(36px,5vw,52px); display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .review-card{ background:#fff; border-radius:var(--radius-md); padding:30px; border:1px solid var(--border); }
+  .review-card .stars{ color:var(--gold); letter-spacing:2px; font-size:15px; }
+  .review-card p{ margin-top:16px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.6; color:var(--ink); }
+  .review-author{ margin-top:20px; display:flex; flex-direction:column; }
+  .review-author b{ font-size:13.5px; font-weight:600; }
+  .review-author span{ font-size:11.5px; color:var(--ink-dim); margin-top:2px; }
+  .reviews-more{ margin-top:34px; text-align:center; }
+  .reviews-more a{ font-size:13px; letter-spacing:0.05em; color:var(--rose-deep); text-decoration:none; font-weight:500; }
+  .reviews-more a:hover{ color:var(--ink); }
+  @media (max-width:900px){ .reviews-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- faq ---------- */
+  .faq{ background:var(--cream-deep); }
+  .faq-head{ max-width:640px; }
+  .faq-list{ margin-top:clamp(28px,4vw,40px); max-width:760px; display:flex; flex-direction:column; gap:12px; }
+  .faq-item{ background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:4px 22px; }
+  .faq-item summary{
+    list-style:none; cursor:pointer; padding:18px 0; display:flex; align-items:center; justify-content:space-between; gap:16px;
+    font-size:15px; font-weight:500; color:var(--ink);
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{
+    content:"+"; flex:none; font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; color:var(--gold);
+    transition:transform .2s ease;
+  }
+  .faq-item[open] summary::after{ transform:rotate(45deg); }
+  .faq-item p{ padding:0 0 20px; font-size:14px; line-height:1.75; color:var(--ink-dim); font-weight:300; max-width:68ch; }
+  .faq-item p a{ color:var(--rose-deep); text-decoration:underline; text-underline-offset:2px; }
+
+  /* ---------- contact ---------- */
+  .contact{ background:#fff; }
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(36px,5vw,64px); align-items:start; }
+  .contact-lead{ margin-top:16px; font-size:15.5px; line-height:1.75; color:var(--ink-dim); max-width:48ch; font-weight:300; }
+  .contact-rows{ margin-top:32px; display:flex; flex-direction:column; gap:20px; }
+  .contact-row{ display:flex; align-items:flex-start; gap:14px; padding-top:18px; border-top:1px solid var(--border); }
+  .contact-row svg{ flex:none; color:var(--gold); margin-top:2px; }
+  .contact-row b{ font-size:14.5px; font-weight:600; }
+  .contact-row a{ text-decoration:none; }
+  .contact-row a:hover b{ color:var(--rose-deep); }
+  .contact-row span{ display:block; font-size:12.5px; color:var(--ink-dim); margin-top:3px; }
+  .contact-ctas{ margin-top:34px; display:flex; flex-wrap:wrap; gap:14px; }
+  .contact-map{ border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow); aspect-ratio:4/5; }
+  .contact-map iframe{ width:100%; height:100%; border:0; }
+  @media (max-width:860px){ .contact-grid{ grid-template-columns:1fr; } .contact-map{ aspect-ratio:16/10; } }
+
+  /* ---------- floating book button (desktop) ---------- */
+  .float-book{
+    position:fixed; right:28px; bottom:28px; z-index:45;
+    display:none; align-items:center; gap:10px;
+    padding:15px 24px; border-radius:999px;
+    background:linear-gradient(135deg, var(--rose), var(--rose-deep)); color:#fff;
+    text-decoration:none; font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase; font-weight:500;
+    box-shadow:0 18px 40px -14px rgba(192,138,124,0.6);
+    opacity:0; transform:translateY(14px); transition:opacity .3s ease, transform .3s ease, filter .15s ease;
+    pointer-events:none;
+  }
+  .float-book.visible{ opacity:1; transform:translateY(0); pointer-events:auto; }
+  .float-book:hover{ filter:brightness(1.05); }
+  @media (min-width:761px){ .float-book{ display:inline-flex; } }
+
+  /* ---------- footer ---------- */
+  .site-footer{ background:var(--ink); color:var(--cream); padding-top:56px; }
+  .site-footer .brand .name b{ color:var(--cream); }
+  .site-footer .brand .name small{ color:rgba(251,247,243,0.55); }
+  .footer-grid{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px; padding-bottom:36px; }
+  .footer-nav{ display:flex; flex-wrap:wrap; gap:clamp(16px,2.4vw,30px); }
+  .footer-nav a{ font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; color:rgba(251,247,243,0.72); transition:color .15s ease; }
+  .footer-nav a:hover{ color:var(--rose-soft); }
+  .footer-social{ display:flex; gap:18px; }
+  .footer-social a{ font-size:12.5px; letter-spacing:0.05em; text-decoration:none; color:rgba(251,247,243,0.72); }
+  .footer-social a:hover{ color:var(--rose-soft); }
+  .footer-bottom{ border-top:1px solid rgba(251,247,243,0.14); padding:20px 0 28px; }
+  .footer-bottom p{ font-size:12px; color:rgba(251,247,243,0.55); text-align:center; }
+
+  /* ---------- CircularCarousel (React Bits) ---------- */
+  .circular-carousel {
+    --cc-fade: #ffffff;
+    --cc-radius: 18px;
+    --cc-inner: 0.4;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: none;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .circular-carousel[data-axis='x'] { touch-action: pan-x; }
+  .circular-carousel[data-draggable] { cursor: grab; }
+  .circular-carousel[data-dragging] { cursor: grabbing; }
+  .circular-carousel:focus-visible { box-shadow: inset 0 0 0 2px rgba(192,138,124,0.55); }
+  .circular-carousel__view { position: absolute; inset: 0; }
+  .circular-carousel[data-shape='wheel'] .circular-carousel__view {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+  }
+  .circular-carousel[data-shape='panorama'] .circular-carousel__view {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  }
+  .circular-carousel__stage {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.45s ease;
+  }
+  .circular-carousel[data-ready] .circular-carousel__stage { opacity: 1; }
+  .circular-carousel__camera, .circular-carousel__ring, .circular-carousel__card {
+    width: 0; height: 0; transform-style: preserve-3d;
+  }
+  .circular-carousel__camera { position: relative; }
+  .circular-carousel__ring, .circular-carousel__card { position: absolute; left: 0; top: 0; }
+  .circular-carousel__tile { position: absolute; outline: 1px solid transparent; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .circular-carousel__frame { position: absolute; left: 0; top: 0; width: 100%; overflow: hidden; }
+  .circular-carousel__photo { position: absolute; display: block; max-width: none; object-fit: cover; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+  .circular-carousel__shade, .circular-carousel__inner { position: absolute; inset: 0; pointer-events: none; }
+  .circular-carousel__shade { background: var(--cc-fade); opacity: var(--cc-depth, 0); }
+  .circular-carousel__inner { background: #000; opacity: var(--cc-inner); }
+  .circular-carousel__caption {
+    position: absolute; left: 0; right: 0; bottom: 22px;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding: 0 16px; color: var(--ink); text-align: center; pointer-events: none;
+    animation: circular-carousel-reveal 900ms ease both;
+    font-family:'Jost', sans-serif;
+  }
+  .circular-carousel__title {
+    display: flex; max-width: 100%; flex-direction: column; align-items: center;
+    font-size: 15px; font-weight: 500; line-height: 1.35;
+    animation: circular-carousel-title 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .circular-carousel__subtitle { font-weight: 400; opacity: 0.6; }
+  .circular-carousel__count { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; font-variant-numeric: tabular-nums; line-height: 1; opacity: 0.5; }
+  .circular-carousel__slash { opacity: 0.6; }
+  .circular-carousel__digits { display: inline-flex; }
+  .circular-carousel__digit { display: inline-block; height: 1em; overflow: hidden; }
+  .circular-carousel__reel { display: flex; flex-direction: column; transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .circular-carousel__reel > span { height: 1em; }
+  .circular-carousel__live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @keyframes circular-carousel-title { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes circular-carousel-reveal { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .circular-carousel__stage, .circular-carousel__reel { transition: none; }
+    .circular-carousel__caption, .circular-carousel__title { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <a href="#" class="brand">
+    <img class="mark" src="images/logo.png" alt="Salon Be Beauty — logo" />
+    <span class="name"><b>Be Beauty</b><small>Eliška Hanzlová</small></span>
+  </a>
+  <nav>
+    <a href="#o-mne">O mně</a>
+    <a href="#sluzby">Služby</a>
+    <a href="#pred-po">Před a po</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#reference">Reference</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="cta-link">Rezervovat termín</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Otevřít menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="close" id="drawerClose" aria-label="Zavřít menu">&times;</button>
+  <a href="#o-mne">O mně</a>
+  <a href="#sluzby">Služby</a>
+  <a href="#pred-po">Před a po</a>
+  <a href="#galerie">Galerie</a>
+  <a href="#reference">Reference</a>
+  <a href="#kontakt">Kontakt</a>
+  <a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="cta-link" style="font-family:'Jost',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:0.1em; padding:14px 28px; border-radius:999px; background:linear-gradient(135deg, var(--rose), var(--rose-deep)); color:#fff;">Rezervovat termín</a>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="hero-photo" style="width:320px; height:400px; top:14%; right:7%;">
+      <img src="images/gallery-tehotenske-studio.jpg" alt="Portfolio práce salonu Be Beauty" />
+    </div>
+    <div class="hero-petal" style="width:140px; height:140px; bottom:8%; left:6%; opacity:0.35;"></div>
+    <div class="wrap hero-inner">
+      <p class="hero-eyebrow reveal">Kosmetický salon · Roudnice nad Labem</p>
+      <h1 class="reveal">Objevte svou <em>přirozenou</em> krásu</h1>
+      <p class="hero-lead reveal">Individuální péče, luxusní kosmeceutika LARENS a ruce, kterým záleží na každém detailu. Salon Be Beauty je místo, kde si odpočinete a odejdete zářivější.</p>
+      <div class="hero-ctas reveal">
+        <a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="btn">Rezervovat termín</a>
+        <a href="#sluzby" class="btn ghost">Prohlédnout služby</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="hero-stat"><b data-count="10" data-suffix="+">0+</b><span>let praxe v kosmetice</span></div>
+        <div class="hero-stat"><b data-count="100" data-suffix="%">0%</b><span>individuální přístup</span></div>
+        <div class="hero-stat"><b>LARENS</b><span>profesionální kosmeceutika</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quickbar">
+    <div class="wrap">
+      <div class="quickbar-grid">
+        <a class="qb-item" href="https://maps.google.com/?q=Alej+17.+listopadu+1101,+Roudnice+nad+Labem" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-7.1 7-12.5A7 7 0 0 0 5 9.5C5 14.9 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          <span><b>Alej 17. listopadu 1101</b><small>Roudnice nad Labem</small></span>
+        </a>
+        <a class="qb-item" href="tel:+420722241139">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 4 6a2 2 0 0 1 2-2Z"/></svg>
+          <span><b>722 241 139</b><small>Zavolejte nám</small></span>
+        </a>
+        <span class="qb-item open" id="statusItem">
+          <span class="dot"></span>
+          <span><b id="statusText">Otevřeno nyní</b><small id="statusHint">Po–So 8:30–19:00</small></span>
+        </span>
+        <a class="qb-item" href="https://www.instagram.com/salon_bebeauty/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          <span><b>Sledujte nás</b><small>@salon_bebeauty</small></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= O MNĚ ================= -->
+  <section class="about" id="o-mne">
+    <div class="wrap about-grid">
+      <div class="about-media reveal">
+        <div class="about-frame">
+          <img src="images/eliska-o-mne.jpg" alt="Eliška Hanzlová při líčení klientky v salonu Be Beauty" />
+          <div class="about-ring"></div>
+        </div>
+        <div class="about-badge">
+          <b>10+</b>
+          <span>let praxe<br>v kosmetice</span>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">O salonu</p>
+        <h2>Eliška Hanzlová</h2>
+        <p class="about-quote">„Každá žena je krásná a má svoje kouzlo — mým úkolem je pomoct jí ho objevit.“</p>
+        <p class="about-text">Salon Be Beauty vznikl z vášně pro poctivou kosmetiku a individuální péči. Věnuji se nejnovějším trendům v anti-age ošetřeních i osvědčeným přírodním technikám, jako je maderoterapie, a každé klientce věnuji tolik času a pozornosti, kolik její pleť skutečně potřebuje.</p>
+        <p class="about-text">Najdete mě v budově PentaHospitals v Roudnici nad Labem, kde pro vás ráda vytvořím prostor klidu uprostřed shonu všedních dní.</p>
+        <div class="about-points">
+          <div class="about-point"><span class="num">01</span>Individuální přístup ke každé pleti</div>
+          <div class="about-point"><span class="num">02</span>Profesionální kosmeceutika LARENS</div>
+          <div class="about-point"><span class="num">03</span>Péče s důrazem na detail a relaxaci</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SLUŽBY A CENÍK ================= -->
+  <section class="services" id="sluzby">
+    <div class="wrap">
+      <div class="services-head reveal">
+        <p class="eyebrow">Nechte se hýčkat</p>
+        <h2>Služby a péče na míru</h2>
+        <p class="services-lead">Udělejte něco pro sebe a svoji pleť zároveň — a užijte si relax jenom pro sebe. Finální cena se odvíjí od rozsahu ošetření a ráda ji s vámi proberu na konzultaci.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2c2.5 3 4 6.5 4 10a4 4 0 0 1-8 0c0-3.5 1.5-7 4-10Z"/><path d="M8.5 15.5c-1 1-1.5 2-1.5 3.5"/><path d="M15.5 15.5c1 1 1.5 2 1.5 3.5"/></svg>
+          </div>
+          <h3>Kosmeceutika LARENS</h3>
+          <p>Moderní a specializovaná značka orientovaná na boj proti stárnutí a kožním problémům. Regenerace, výživa a péče v jednom.</p>
+          <ul class="service-list">
+            <li>Anti-age ošetření pleti</li>
+            <li>Řešení akné a kožních problémů</li>
+            <li>Hloubková regenerace a výživa</li>
+          </ul>
+          <a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="service-link">Rezervovat ošetření →</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="10" y="3" width="4" height="18" rx="2"/><rect x="4" y="7" width="3.2" height="10" rx="1.6"/><rect x="16.8" y="7" width="3.2" height="10" rx="1.6"/></svg>
+          </div>
+          <h3>Maderoterapie obličeje a krku</h3>
+          <p>100% přírodní způsob, jak konturovat obličej a krk, odstranit dvojitou bradu a zjemnit vrásky pomocí speciálních dřevěných nástrojů.</p>
+          <ul class="service-list">
+            <li>Zpevnění a tonizace pokožky</li>
+            <li>Podpora tvorby kolagenu a elastinu</li>
+            <li>Zlepšení krevního oběhu</li>
+          </ul>
+          <a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="service-link">Rezervovat ošetření →</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z"/></svg>
+          </div>
+          <h3>Vizáž &amp; svatební líčení</h3>
+          <p>Správně zvolené líčení podtrhne vaši přirozenou krásu. Specializuji se na svatební líčení pro nevěsty i jejich hosty.</p>
+          <ul class="service-list">
+            <li>Svatební líčení nevěsty i hostů</li>
+            <li>Líčení proměny</li>
+            <li>Školička líčení</li>
+          </ul>
+          <a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="service-link">Rezervovat termín →</a>
+        </article>
+      </div>
+
+      <div class="pricing reveal" id="cenik">
+        <div class="pricing-tabs" role="tablist" aria-label="Kategorie ceníku">
+          <button class="pricing-tab is-active" data-tab="kosmetika" role="tab" aria-selected="true">Kosmetika</button>
+          <button class="pricing-tab" data-tab="doplnky" role="tab" aria-selected="false">Doplňky k ošetření</button>
+          <button class="pricing-tab" data-tab="vizaz" role="tab" aria-selected="false">Vizáž &amp; líčení</button>
+          <button class="pricing-tab" data-tab="svatba" role="tab" aria-selected="false">Svatební balíčky</button>
+        </div>
+        <div class="pricing-panel is-active" data-panel="kosmetika" id="panel-kosmetika"></div>
+        <div class="pricing-panel" data-panel="doplnky" id="panel-doplnky"></div>
+        <div class="pricing-panel" data-panel="vizaz" id="panel-vizaz"></div>
+        <div class="pricing-panel" data-panel="svatba" id="panel-svatba"></div>
+        <p class="pricing-note">Ceník kosmetiky platný od 1.&nbsp;10.&nbsp;2026, ceník vizáže od 1.&nbsp;1.&nbsp;2026. Konečná cena se může lišit dle rozsahu ošetření — ráda vše upřesním na konzultaci.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PŘED A PO ================= -->
+  <section class="before-after" id="pred-po">
+    <div class="wrap">
+      <div class="ba-head reveal">
+        <p class="eyebrow">Líčení proměny</p>
+        <h2>Před a po</h2>
+        <p class="ba-lead">Stejná žena, nová sebevědomá verze sebe sama. Potáhněte posuvník a podívejte se na proměnu.</p>
+      </div>
+      <div class="ba-slider reveal" id="baSlider">
+        <img class="ba-img" src="images/pred-po-po.jpg" alt="Po proměně — líčení a styling v salonu Be Beauty" />
+        <div class="ba-before-wrap" id="baBeforeWrap">
+          <img class="ba-img" src="images/pred-po-pred.jpg" alt="Před proměnou — přirozený vzhled bez líčení" />
+        </div>
+        <span class="ba-label ba-label-before">Před</span>
+        <span class="ba-label ba-label-after">Po</span>
+        <div class="ba-divider"></div>
+        <div class="ba-handle" id="baHandle" role="slider" tabindex="0" aria-label="Posuvník Před a po" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6 3 12l6 6"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m15 6 6 6-6 6"/></svg>
+        </div>
+      </div>
+      <p class="ba-caption reveal">Skutečná klientka salonu Be Beauty — líčení proměny.</p>
+    </div>
+  </section>
+
+  <!-- ================= PROČ BE BEAUTY ================= -->
+  <section class="why">
+    <div class="wrap">
+      <div class="why-head reveal">
+        <p class="eyebrow">Proč Be Beauty</p>
+        <h2>Péče, které můžete důvěřovat</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z"/></svg></div>
+          <h3>Individuální přístup</h3>
+          <p>Každé ošetření přizpůsobím přesně potřebám vaší pleti.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2c2.5 3 4 6.5 4 10a4 4 0 0 1-8 0c0-3.5 1.5-7 4-10Z"/></svg></div>
+          <h3>Profesionální kosmeceutika</h3>
+          <p>Pracuji výhradně s prověřenými produkty značky LARENS.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></div>
+          <h3>10+ let zkušeností</h3>
+          <p>Dlouholetá praxe v kosmetice i vizážistice.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 17.3 6.2 21l1.5-6.5L2.5 9.8l6.6-.6L12 3l2.9 6.2 6.6.6-5.2 4.7 1.5 6.5Z"/></svg></div>
+          <h3>Hodnocení 5,0/5</h3>
+          <p>Na Googlu i mezi klientkami v Roudnici nad Labem a okolí.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DÁRKOVÝ POUKAZ ================= -->
+  <section class="voucher">
+    <div class="wrap voucher-inner reveal">
+      <div class="voucher-ic">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="7" width="19" height="13" rx="2"/><path d="M2.5 11h19"/><path d="M12 7v13"/><path d="M8.3 7a2.2 2.2 0 1 1 3.7-2.4A2.2 2.2 0 1 1 15.7 7"/></svg>
+      </div>
+      <div class="voucher-copy">
+        <h2>Darujte zážitek, ne jen věc</h2>
+        <p>Dárkový poukaz na kosmetické i vizážistické služby dle vlastního výběru, na částku, jakou si sami zvolíte. Součástí je i elegantní obálka — ideální dárek k narozeninám, Vánocům nebo jen tak pro radost.</p>
+      </div>
+      <a href="mailto:kosmeticke.sluzby@post.cz?subject=Darkovy%20poukaz" class="btn voucher-btn">Objednat poukaz</a>
+    </div>
+  </section>
+
+  <!-- ================= GALERIE ================= -->
+  <section class="gallery" id="galerie">
+    <div class="wrap">
+      <div class="gallery-head reveal">
+        <p class="eyebrow">Galerie</p>
+        <h2>Nahlédněte do salonu</h2>
+        <p class="gallery-lead">Výběr ze skutečných prací — těhotenské fotografie s vizáží, editorialové líčení i maderoterapie. Otáčejte myší, prstem nebo klikněte na fotku.</p>
+      </div>
+      <div class="gallery-stage reveal">
+        <div id="cc-root"><p class="cc-fallback">Galerie se načítá…</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REFERENCE ================= -->
+  <section class="reviews" id="reference">
+    <div class="wrap">
+      <div class="reviews-head reveal">
+        <p class="eyebrow">Reference</p>
+        <h2>Co o nás říkají klientky</h2>
+        <div class="rating-badge">
+          <span class="stars">★★★★★</span>
+          <b>5,0 / 5</b>
+          <span>· 8 recenzí na Googlu</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>„Super salón, kvalitní produkty, super péče. Doporučuji.“</p>
+          <div class="review-author"><b>Romana Swett</b><span>Google recenze</span></div>
+        </article>
+        <article class="review-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>„Profesionální přístup a příjemné prostředí — ráda se vracím.“</p>
+          <div class="review-author"><b>Olga Horňáková</b><span>Google recenze</span></div>
+        </article>
+        <article class="review-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>„Krásné výsledky a milá obsluha. Jednoznačně doporučuji.“</p>
+          <div class="review-author"><b>Silvia Piptová</b><span>Google recenze</span></div>
+        </article>
+      </div>
+      <p class="reviews-more reveal"><a href="https://www.google.com/search?q=Salon+Be+Beauty+Eli%C5%A1ka+Hanzlov%C3%A1+Roudnice+nad+Labem" target="_blank" rel="noopener">Zobrazit všechny recenze na Googlu →</a></p>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq">
+    <div class="wrap">
+      <div class="faq-head reveal">
+        <p class="eyebrow">Časté dotazy</p>
+        <h2>Než napíšete</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item" open>
+          <summary>Jak si mohu objednat termín?</summary>
+          <p>Nejrychleji telefonicky na <a href="tel:+420722241139">722&nbsp;241&nbsp;139</a>, e-mailem na <a href="mailto:kosmeticke.sluzby@post.cz">kosmeticke.sluzby@post.cz</a>, nebo přes online rezervaci na webu.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Je možné platit kartou?</summary>
+          <p>Ano, v salonu je možná platba kartou i hotově.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Jak probíhá zkouška svatebního líčení?</summary>
+          <p>Zkouška se koná zhruba měsíc před svatbou v salonu v Roudnici n. L. a trvá 1–2 hodiny. Přijďte prosím nenalíčená, nejlépe v tričku nebo šatech bílé barvy. Po zkoušce společně domluvíme všechny detaily k samotnému svatebnímu dni.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Jak funguje záloha na svatební líčení?</summary>
+          <p>V den zkoušky se hradí 50&nbsp;% z celkové ceny jako záloha, zbytek v den svatby. Záloha je nevratná.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Co je líčení proměny?</summary>
+          <p>Dvouhodinová procedura, při které si vyzkoušíte profesionální celkovou vizáž a zjistíte, co vám sluší. V ceně je lehká úprava vlasů, poradenství, zapůjčení bižuterie a 4 upravené fotografie na památku.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Dojíždíte i mimo Roudnici nad Labem?</summary>
+          <p>Ano, zaměřuji se hlavně na Ústecký a Středočeský kraj, ale není problém dojet kamkoliv. Cestovné je 8&nbsp;Kč/km tam a zpět (do Roudnice n. L. a Libochovic zdarma).</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KONTAKT ================= -->
+  <section class="contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div class="contact-info reveal">
+        <p class="eyebrow">Kontakt a rezervace</p>
+        <h2>Objednejte si termín</h2>
+        <p class="contact-lead">Nejrychleji se domluvíme telefonicky nebo přes online rezervaci. Těším se na vás v salonu v budově PentaHospitals v Roudnici nad Labem.</p>
+
+        <div class="contact-rows">
+          <div class="contact-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-7.1 7-12.5A7 7 0 0 0 5 9.5C5 14.9 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            <div><b>Alej 17. listopadu 1101</b><span>413 01 Roudnice nad Labem — budova PentaHospitals</span></div>
+          </div>
+          <div class="contact-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 4 6a2 2 0 0 1 2-2Z"/></svg>
+            <div><a href="tel:+420722241139"><b>722 241 139</b></a><span>Po–So, volejte přímo</span></div>
+          </div>
+          <div class="contact-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <div><a href="mailto:kosmeticke.sluzby@post.cz"><b>kosmeticke.sluzby@post.cz</b></a><span>Napište mi e-mail</span></div>
+          </div>
+          <div class="contact-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+            <div><b>Po – So: 8:30 – 19:00</b><span>Neděle dle objednávek</span></div>
+          </div>
+        </div>
+
+        <div class="contact-ctas">
+          <a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="btn">Rezervovat termín</a>
+          <a href="https://www.instagram.com/salon_bebeauty/" target="_blank" rel="noopener" class="btn ghost">@salon_bebeauty</a>
+        </div>
+      </div>
+
+      <div class="contact-map reveal">
+        <iframe
+          title="Mapa — Salon Be Beauty, Roudnice nad Labem"
+          src="https://www.google.com/maps?q=Alej+17.+listopadu+1101,+413+01+Roudnice+nad+Labem&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <a href="#" class="brand">
+      <img class="mark" src="images/logo.png" alt="Salon Be Beauty — logo" />
+      <span class="name"><b>Be Beauty</b><small>Eliška Hanzlová</small></span>
+    </a>
+    <nav class="footer-nav">
+      <a href="#o-mne">O mně</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#pred-po">Před a po</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#reference">Reference</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/salon_bebeauty/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/search/top?q=Salon%20Be%20Beauty%20Eli%C5%A1ka%20Hanzlov%C3%A1" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Salon Be Beauty – Eliška Hanzlová · Alej 17. listopadu 1101, Roudnice n. L., 413 01</p>
+  </div>
+</footer>
+
+<nav class="mobile-bar">
+  <a href="tel:+420722241139">Volat</a>
+  <a href="https://www.instagram.com/salon_bebeauty/" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="primary">Rezervovat</a>
+</nav>
+
+<a href="https://salon-be-beauty7.webnode.cz/kontakt/" target="_blank" rel="noopener" class="float-book" id="floatBook">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+  Rezervovat termín
+</a>
+
+<script>
+  // Topbar scroll state
+  const topbar = document.getElementById('topbar');
+  window.addEventListener('scroll', () => {
+    topbar.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // Mobile drawer
+  const drawer = document.getElementById('drawer');
+  document.getElementById('menuBtn').addEventListener('click', () => drawer.classList.add('open'));
+  document.getElementById('drawerClose').addEventListener('click', () => drawer.classList.remove('open'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Otevírací doba: Po–So 8:30–19:00, neděle dle objednávek
+  (function(){
+    const now = new Date();
+    const day = now.getDay(); // 0 = neděle
+    const hour = now.getHours() + now.getMinutes()/60;
+    const isOpen = day >= 1 && day <= 6 && hour >= 8.5 && hour < 19;
+    const item = document.getElementById('statusItem');
+    const text = document.getElementById('statusText');
+    item.classList.toggle('open', isOpen);
+    item.classList.toggle('closed', !isOpen);
+    text.textContent = isOpen ? 'Otevřeno nyní' : 'Zavřeno';
+  })();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Před a po — přetahovací posuvník
+  (function(){
+    const slider = document.getElementById('baSlider');
+    const handle = document.getElementById('baHandle');
+    if (!slider || !handle) return;
+
+    function setPos(pct){
+      pct = Math.min(96, Math.max(4, pct));
+      slider.style.setProperty('--ba-pos', pct + '%');
+      handle.setAttribute('aria-valuenow', Math.round(pct));
+    }
+    function posFromClientX(clientX){
+      const rect = slider.getBoundingClientRect();
+      return ((clientX - rect.left) / rect.width) * 100;
+    }
+    let dragging = false;
+    function onPointerDown(e){
+      dragging = true;
+      slider.classList.add('dragging');
+      handle.setPointerCapture(e.pointerId);
+      setPos(posFromClientX(e.clientX));
+    }
+    function onPointerMove(e){
+      if (!dragging) return;
+      setPos(posFromClientX(e.clientX));
+    }
+    function onPointerUp(e){
+      dragging = false;
+      slider.classList.remove('dragging');
+      try { handle.releasePointerCapture(e.pointerId); } catch(err) {}
+    }
+    handle.addEventListener('pointerdown', onPointerDown);
+    handle.addEventListener('pointermove', onPointerMove);
+    handle.addEventListener('pointerup', onPointerUp);
+    handle.addEventListener('pointercancel', onPointerUp);
+    handle.addEventListener('keydown', (e) => {
+      const current = parseFloat(getComputedStyle(slider).getPropertyValue('--ba-pos')) || 50;
+      if (e.key === 'ArrowLeft') { setPos(current - 5); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { setPos(current + 5); e.preventDefault(); }
+      if (e.key === 'Home') { setPos(4); e.preventDefault(); }
+      if (e.key === 'End') { setPos(96); e.preventDefault(); }
+    });
+    // Klik kamkoliv do rámečku rovnou přesune posuvník na dané místo
+    slider.addEventListener('click', (e) => {
+      if (e.target.closest('.ba-handle')) return;
+      setPos(posFromClientX(e.clientX));
+    });
+  })();
+
+  // ---------- Detailní ceník — reálná data ze salon-be-beauty7.webnode.cz ----------
+  const PRICE_DATA = {
+    kosmetika: [
+      { name: 'Základní ošetření', dur: '60 min', note: 'Kompletní ošetření obličeje (bez masáže).', price: '890 Kč' },
+      { name: 'Hydratační ošetření', dur: '75 min', note: 'Kompletní ošetření s masáží obličeje a dekoltu.', price: '990 Kč' },
+      { name: 'Proti vráskám', dur: '90 min', note: 'Ošetření + depilace horního rtu, maska a peeling na rty. (30+)', price: '1 090 Kč' },
+      { name: 'Problematická pleť', dur: '90 min', note: 'Včetně alginátové masky a ampule anti acne.', price: '1 190 Kč' },
+      { name: 'Deluxe', dur: '90 min', note: 'Nejoblíbenější ♡ ampule anti-age, alginátová maska na míru, depilace rtu, peeling rtů. (30+)', price: '1 290 Kč' },
+      { name: 'Top Deluxe', dur: '120 min', note: 'Maska s bioaktivními růstovými faktory, ošetření očního okolí, barvení obočí nebo řas. (30+)', price: '1 490 Kč' },
+      { name: 'Čokoládo-kávový relax', dur: '90 min', note: 'Kávový peeling, čokoládová maska, masáž obličeje a dekoltu s vůní čokolády.', price: '1 190 Kč' },
+      { name: 'Maderoterapie pleti', dur: '45 min', note: 'Odličení, tonizace, maderoterapie, maska, závěrečný krém.', price: '650 Kč' },
+      { name: 'Maderoterapie pleti — balíček 5×', dur: '5× 45 min', note: 'Výhodný balíček.', price: '2 990 Kč' },
+      { name: 'Mikrojehličkování', dur: '60 min', note: 'Sérum seratok, zklidňující maska, SPF krém. (říjen–březen)', price: '1 800 Kč' },
+      { name: 'Hydrodermabraze', dur: '90 min', note: 'Přístrojové ošetření — čištění tlakem vody.', price: '1 390 Kč' },
+      { name: 'Ultrazvukový lifting + radiofrekvence', dur: '90 min', note: 'Přístrojové ošetření + kyslíkový spray, depilace rtu, barvení obočí/řas. (30+)', price: '1 590 Kč' },
+      { name: 'Chemický peeling', dur: '60 min', note: 'Komplex přírodních peptidů, 5% kys. mandlová + 5% kys. pyrohroznová. (říjen–březen)', price: '1 200 Kč' },
+      { name: 'Chemický peeling — balíček 5×', dur: '5× 60 min', note: 'Výhodný balíček.', price: '5 500 Kč' }
+    ],
+    doplnky: [
+      { name: 'Skinboostery — bez přístroje', note: '✨ Novinka. Doporučeno 1.–2. ošetření po 2 týdnech, 3. po 3 měsících.', price: '350 Kč' },
+      { name: 'Skinboostery — s radiofrekvencí', note: '✨ Novinka.', price: '450 Kč' },
+      { name: 'Skinboostery — samostatná aplikace', dur: '20 min', note: 'Bez kosmetického ošetření, s radiofrekvencí.', price: '550 Kč' },
+      { name: 'Ošetření dekoltu', note: 'Navíc ke kosmetickému ošetření.', price: '250 Kč' },
+      { name: 'Textilní maska', note: 'Dle aktuální nabídky.', price: '180 Kč' },
+      { name: 'Aplikace biopeptidového séra', note: 'Zapracování přístrojem.', price: '350 Kč' },
+      { name: 'Sérum Anti Aging Vials', note: 'Aplikace obličej, krk.', price: '160 Kč' },
+      { name: 'Sérum Anti Acne Vials', note: 'Aplikace obličej, krk.', price: '160 Kč' },
+      { name: 'Ošetření očního okolí', note: 'Mikromasáž, sérum, maska.', price: '250 Kč' },
+      { name: 'Čištění ultrazvukovou špachtlí', dur: '30 min', note: 'Samostatné čištění pleti.', price: '450 Kč' },
+      { name: 'Depilace horního rtu', price: '50 Kč' },
+      { name: 'Depilace brady', price: '80 Kč' },
+      { name: 'Depilace tváře', price: '160 Kč' },
+      { name: 'Úprava obočí', note: 'Samostatně, bez kosmetického ošetření.', price: '200 Kč' },
+      { name: 'Barvení obočí', note: 's kosmetickým ošetřením / samostatně', price: '150 / 250 Kč' },
+      { name: 'Barvení řas', note: 's kosmetickým ošetřením / samostatně', price: '150 / 250 Kč' },
+      { name: 'Masáž obličeje a dekoltu', dur: '20 min', note: 'Samostatná masáž.', price: '450 Kč' },
+      { name: 'Vypichování milií', note: 'do 3 ks / více jak 3 ks', price: '100 / 200 Kč' }
+    ],
+    vizaz: [
+      { name: 'Denní líčení', price: '800 Kč' },
+      { name: 'Večerní / plesové líčení', note: 'V ceně trsové řasy.', price: '1 000 Kč' },
+      { name: 'Photo make-up', note: 'V ceně trsové řasy a lehká úprava vlasů.', price: '1 200 Kč' },
+      { name: 'Řasy trsové', price: '200 Kč' },
+      { name: 'Řasy klasické vcelku', price: '300 Kč' },
+      { name: 'Líčení proměny', dur: '2 hodiny', note: '4 upravené fotografie, celková vizáž, lehká úprava vlasů, poradenství, zapůjčení bižuterie.', price: '1 500 Kč' },
+      { name: 'Školička líčení', dur: '1 hodina', note: 'Osobní mini kurz — poradenství, ukázka líčení, rady a tipy z praxe.', price: '1 100 Kč' },
+      { name: 'Focení s vizáží v ateliéru', dur: '1 hodina', note: 'Profesionální fotografka, 10 upravených fotografií, celková vizáž, zapůjčení bižuterie.', price: '4 000 Kč' },
+      { name: 'Rozlučka se svobodou', note: '✨ Novinka. Cena za osobu.', price: 'od 650 Kč' }
+    ],
+    svatba: [
+      { name: 'Basic', price: '2 499 Kč', items: ['Svatební make-up v den svatby', 'Zkouška a konzultace péče o pleť před svatbou'] },
+      { name: 'Relax', price: '3 200 Kč', items: ['Svatební make-up v den svatby', 'Zkouška a konzultace před svatbou', 'Kosmetické ošetření Deluxe 90–120 min', 'V ceně úprava a barvení obočí'] },
+      { name: 'Luxury', price: '3 399 Kč', popular: true, items: ['Svatební make-up v den svatby', 'Zkouška a konzultace před svatbou', 'Nalíčení dalších 2 účastnic (maminka, svědkyně)'] },
+      { name: 'Deluxe', price: '6 990 Kč', items: ['Svatební make-up v den svatby', 'Zkouška a konzultace před svatbou', 'Asistence cca 8 h v den svatby', 'Přelíčení před focením, pomoc s oblékáním a doplňky'] }
+    ]
+  };
+
+  function czRow(item){
+    const dur = item.dur ? `<span class="price-row-dur">${item.dur}</span>` : '';
+    const note = item.note ? `<p class="price-row-note">${item.note}</p>` : '';
+    return `<div class="price-row"><div class="price-row-main"><div class="price-row-top"><b>${item.name}</b>${dur}</div>${note}</div><span class="price-row-amount">${item.price}</span></div>`;
+  }
+
+  document.getElementById('panel-kosmetika').innerHTML = PRICE_DATA.kosmetika.map(czRow).join('');
+  document.getElementById('panel-doplnky').innerHTML = PRICE_DATA.doplnky.map(czRow).join('');
+  document.getElementById('panel-vizaz').innerHTML = PRICE_DATA.vizaz.map(czRow).join('');
+  document.getElementById('panel-svatba').innerHTML = `<div class="wedding-grid">` + PRICE_DATA.svatba.map(pkg => `
+    <div class="wedding-card${pkg.popular ? ' is-popular' : ''}">
+      <h4>${pkg.name}</h4>
+      <div class="wc-price">${pkg.price}</div>
+      <ul>${pkg.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    </div>`).join('') + `</div>`;
+
+  // Přepínání záložek ceníku
+  document.querySelectorAll('.pricing-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.pricing-tab').forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected','false'); });
+      document.querySelectorAll('.pricing-panel').forEach(p => p.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected','true');
+      document.querySelector(`.pricing-panel[data-panel="${tab.dataset.tab}"]`).classList.add('is-active');
+    });
+  });
+
+  // ---------- Plovoucí tlačítko Rezervovat (desktop) ----------
+  (function(){
+    const btn = document.getElementById('floatBook');
+    const hero = document.querySelector('.hero');
+    if (!btn || !hero) return;
+    const io = new IntersectionObserver(([entry]) => {
+      btn.classList.toggle('visible', !entry.isIntersecting);
+    }, { threshold: 0 });
+    io.observe(hero);
+  })();
+
+  // ---------- Animovaná čísla v hero statistikách ----------
+  (function(){
+    const stats = document.querySelectorAll('.hero-stat b[data-count]');
+    if (!stats.length) return;
+    const animate = (el) => {
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1100;
+      const start = performance.now();
+      function tick(now){
+        const p = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    stats.forEach(s => io.observe(s));
+  })();
+</script>
+
+<!-- ================= GALERIE — CircularCarousel (React Bits) ================= -->
+<!-- Lehká no-build integrace: React + ReactDOM + Babel standalone přes CDN, komponenta se transpiluje přímo v prohlížeči. -->
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel" data-presets="react" data-type="module">
+const { useState, useEffect, useLayoutEffect, useCallback, useMemo, useRef } = React;
+
+const PRESETS = {
+  cylinder: { axis: 'y', tilt: -5, perspective: 2500, curve: 1, spread: 1, inward: false, billboard: false, backfaces: true, window: 0 },
+  orbit:    { axis: 'y', tilt: -16, perspective: 1500, curve: 0, spread: 1.45, inward: false, billboard: true, backfaces: false, window: 0 },
+  wheel:    { axis: 'x', tilt: 0, perspective: 1800, curve: 0, spread: 1, inward: false, billboard: false, backfaces: true, window: 1.7 },
+  panorama: { axis: 'y', tilt: 0, perspective: 0, curve: 1, spread: 1, inward: true, billboard: false, backfaces: false, window: 0 }
+};
+
+const INTRO_LENGTH = { assemble: 1500, rise: 1400, spin: 1800, none: 0 };
+const TILES = 8;
+const OVERLAP = 2.5;
+const DRAG_THRESHOLD = 5;
+const SPRING = 118;
+const SETTLE_SPEED = 9;
+const CAPTION_SPACE = 76;
+const TO_RAD = Math.PI / 180;
+
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+const wrap = degrees => ((((degrees + 180) % 360) + 360) % 360) - 180;
+const easeOut = t => 1 - Math.pow(1 - t, 4);
+const easeOutQuint = t => 1 - Math.pow(1 - t, 5);
+
+const rotateX = (p, degrees) => {
+  const r = degrees * TO_RAD;
+  const c = Math.cos(r);
+  const s = Math.sin(r);
+  return [p[0], p[1] * c - p[2] * s, p[1] * s + p[2] * c];
+};
+
+const rotateY = (p, degrees) => {
+  const r = degrees * TO_RAD;
+  const c = Math.cos(r);
+  const s = Math.sin(r);
+  return [p[0] * c + p[2] * s, p[1], -p[0] * s + p[2] * c];
+};
+
+const Digits = ({ value }) => (
+  <span className="circular-carousel__digits">
+    {String(value)
+      .padStart(2, '0')
+      .split('')
+      .map((digit, index) => (
+        <span key={index} className="circular-carousel__digit">
+          <span className="circular-carousel__reel" style={{ transform: `translateY(${-Number(digit) * 10}%)` }}>
+            {'0123456789'.split('').map(n => (
+              <span key={n}>{n}</span>
+            ))}
+          </span>
+        </span>
+      ))}
+  </span>
+);
+
+const usePrefersReducedMotion = () => {
+  const [reduced, setReduced] = useState(false);
+  useEffect(() => {
+    const query = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    if (!query) return undefined;
+    const update = () => setReduced(query.matches);
+    update();
+    query.addEventListener?.('change', update);
+    return () => query.removeEventListener?.('change', update);
+  }, []);
+  return reduced;
+};
+
+const CircularCarousel = ({
+  items,
+  preset = 'cylinder',
+  intro = 'rise',
+  cardWidth = 220,
+  aspectRatio = 1,
+  gap = 25,
+  curve,
+  tilt,
+  perspective,
+  autoplay = 'drift',
+  speed = 14,
+  interval = 3,
+  direction = 'left',
+  draggable = true,
+  momentum = 0.6,
+  snap = true,
+  pauseOnHover = true,
+  focusOnClick = true,
+  parallax = 0.3,
+  stretch = 0.5,
+  depthFade = 0.55,
+  fadeColor = '#000000',
+  innerShade = 0.6,
+  cornerRadius = 12,
+  captions = false,
+  onChange,
+  onItemClick,
+  className = '',
+  style
+}) => {
+  const list = items && items.length ? items : [];
+  const count = list.length;
+  const shape = PRESETS[preset] ? preset : 'cylinder';
+  const layout = PRESETS[shape];
+  const axis = layout.axis;
+  const tiltValue = tilt ?? layout.tilt;
+  const curveValue = layout.billboard ? 0 : clamp(curve ?? layout.curve, 0, 1);
+  const reduced = usePrefersReducedMotion();
+
+  const cardW = Math.max(40, cardWidth);
+  const cardH = cardW / clamp(aspectRatio, 0.2, 5);
+  const along = axis === 'x' ? cardH : cardW;
+  const step = 360 / count;
+
+  const radius = useMemo(() => {
+    const n = Math.max(count, 3);
+    const pitch = (along + gap) * layout.spread;
+    const chord = pitch / (2 * Math.sin(Math.PI / n));
+    const arc = (n * pitch) / (2 * Math.PI);
+    return Math.max(chord + (arc - chord) * curveValue, along * 0.6);
+  }, [count, along, gap, curveValue, layout.spread]);
+
+  const tiles = useMemo(() => {
+    const total = curveValue > 0.001 ? TILES : 1;
+    const length = along / total;
+    const bend = curveValue > 0.001 ? radius / curveValue : 0;
+    return Array.from({ length: total }, (_, index) => {
+      const start = index * length - (index > 0 ? OVERLAP / 2 : 0);
+      const end = (index + 1) * length + (index < total - 1 ? OVERLAP / 2 : 0);
+      const center = (start + end) / 2 - along / 2;
+      const alpha = bend ? center / bend : 0;
+      const shift = bend ? bend * Math.sin(alpha) : center;
+      const sink = bend ? bend * (1 - Math.cos(alpha)) : 0;
+      const depth = layout.inward ? sink : -sink;
+      const turn = ((layout.inward ? -alpha : alpha) * 180) / Math.PI;
+      const move =
+        axis === 'x'
+          ? `translate3d(0px, ${shift}px, ${depth}px) rotateX(${-turn}deg)`
+          : `translate3d(${shift}px, 0px, ${depth}px) rotateY(${turn}deg)`;
+      return { index, total, start, end, size: end - start, move };
+    });
+  }, [along, axis, curveValue, layout.inward, radius]);
+
+  const rootRef = useRef(null);
+  const stageRef = useRef(null);
+  const cameraRef = useRef(null);
+  const ringRef = useRef(null);
+  const cardRefs = useRef([]);
+  const wakeRef = useRef(() => {});
+  const measureRef = useRef(() => {});
+  const activeRef = useRef(0);
+  const [active, setActive] = useState(0);
+  const [ready, setReady] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const readyRef = useRef(false);
+  readyRef.current = ready;
+
+  const stateRef = useRef({
+    angle: 0, velocity: 0, target: null, dir: 0, press: null, drag: false, hover: false,
+    pointer: { inside: false, x: 0, y: 0 }, yaw: 0, pitch: 0, intro: null, introDone: false,
+    holdUntil: 0, stepAt: 0, suppressClick: false, wheelTimer: 0, fit: 1, shift: 0, drop: 0, last: 0
+  });
+
+  const settings = {
+    count, step, radius, layout, axis,
+    tilt: tiltValue,
+    perspective: layout.inward ? radius : (perspective ?? layout.perspective),
+    cardW, cardH,
+    intro: reduced ? 'none' : intro in INTRO_LENGTH ? intro : 'rise',
+    autoplay: reduced ? 'off' : autoplay,
+    speed,
+    interval: Math.max(0.5, interval),
+    draggable,
+    momentum: clamp(momentum, 0, 1),
+    snap, pauseOnHover,
+    parallax: reduced ? 0 : clamp(parallax, 0, 1),
+    stretch: reduced ? 0 : clamp(stretch, 0, 1),
+    depthFade: clamp(depthFade, 0, 1),
+    captions, reduced
+  };
+  const settingsRef = useRef(settings);
+  settingsRef.current = settings;
+
+  const onChangeRef = useRef(onChange);
+  onChangeRef.current = onChange;
+
+  const dragSign = layout.inward ? -1 : 1;
+  const directionSign = (direction === 'right' ? 1 : -1) * dragSign;
+
+  useEffect(() => {
+    stateRef.current.dir = directionSign;
+    wakeRef.current();
+  }, [directionSign]);
+
+  const sourcesKey = list.map(item => item.src).join('|');
+
+  useEffect(() => {
+    let cancelled = false;
+    setReady(false);
+    const sources = sourcesKey.split('|').slice(0, 12);
+    const load = src =>
+      new Promise(resolve => {
+        const image = new Image();
+        image.decoding = 'async';
+        image.onload = () => (image.decode ? image.decode().then(resolve, resolve) : resolve());
+        image.onerror = resolve;
+        image.src = src;
+      });
+    const timeout = new Promise(resolve => setTimeout(resolve, 2400));
+    Promise.race([Promise.all(sources.map(load)), timeout]).then(() => {
+      if (cancelled) return;
+      const state = stateRef.current;
+      state.introDone = false;
+      state.intro = null;
+      setReady(true);
+      wakeRef.current();
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [sourcesKey]);
+
+  useLayoutEffect(() => {
+    const root = rootRef.current;
+    const stage = stageRef.current;
+    const camera = cameraRef.current;
+    const ring = ringRef.current;
+    if (!root || !stage || !camera || !ring) return undefined;
+    const state = stateRef.current;
+    let raf = 0;
+    let visible = true;
+
+    const nearest = angle => Math.round(angle / settingsRef.current.step) * settingsRef.current.step;
+
+    const measure = () => {
+      const s = settingsRef.current;
+      const rect = root.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const room = s.captions ? CAPTION_SPACE : 0;
+      const width = rect.width * 0.94;
+      const height = (rect.height - room) * 0.92;
+      const P = s.perspective;
+      let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+      if (s.layout.inward) {
+        minX = -width / 2; maxX = width / 2; minY = -s.cardH / 2; maxY = s.cardH / 2;
+      } else {
+        const corners = [
+          [-s.cardW / 2, -s.cardH / 2], [s.cardW / 2, -s.cardH / 2],
+          [-s.cardW / 2, s.cardH / 2], [s.cardW / 2, s.cardH / 2]
+        ];
+        const limit = s.layout.window ? s.layout.window * s.step : 180;
+        for (let a = -limit; a <= limit; a += limit / 24) {
+          for (const [cx, cy] of corners) {
+            let p;
+            if (s.axis === 'x') {
+              p = rotateX([cx, cy, s.radius], -a);
+              p = [p[0], p[1], p[2] - s.radius];
+              p = rotateY(p, s.tilt);
+            } else if (s.layout.billboard) {
+              const c = rotateY([0, 0, s.radius], a);
+              p = [c[0] + cx, cy, c[2] - s.radius];
+              p = rotateX(p, s.tilt);
+            } else {
+              p = rotateY([cx, cy, s.radius], a);
+              p = [p[0], p[1], p[2] - s.radius];
+              p = rotateX(p, s.tilt);
+            }
+            if (p[2] >= P * 0.95) continue;
+            const k = P / (P - p[2]);
+            minX = Math.min(minX, p[0] * k);
+            maxX = Math.max(maxX, p[0] * k);
+            minY = Math.min(minY, p[1] * k);
+            maxY = Math.max(maxY, p[1] * k);
+          }
+        }
+      }
+      const spanX = Math.max(maxX - minX, 1);
+      const spanY = Math.max(maxY - minY, 1);
+      const fit = Math.min(1, width / spanX, height / spanY);
+      state.fit = fit;
+      state.shift = -((minY + maxY) / 2) * fit - room / 2;
+      state.drop = s.axis === 'x' ? (rect.width / fit) * 0.55 + s.cardW : (rect.height / fit) * 0.55 + s.cardH;
+      stage.style.perspective = `${P}px`;
+      stage.style.transform = `translate3d(0, ${state.shift}px, 0) scale(${fit})`;
+    };
+    measureRef.current = measure;
+
+    const introCard = (elapsed, landing) => {
+      if (!state.intro) return { radius: 1, lift: 0 };
+      const type = state.intro.type;
+      const reach = Math.abs(wrap(landing + state.angle));
+      if (type === 'assemble') {
+        const delay = (reach / 180) * 420;
+        const p = easeOut(clamp((elapsed - delay) / 1080, 0, 1));
+        return { radius: 1 + 0.6 * (1 - p), lift: 0 };
+      }
+      if (type === 'rise') {
+        const delay = (reach / 180) * 480;
+        const p = easeOutQuint(clamp((elapsed - delay) / 900, 0, 1));
+        return { radius: 1, lift: (1 - p) * state.drop };
+      }
+      if (type === 'spin') {
+        const p = easeOut(clamp(elapsed / INTRO_LENGTH.spin, 0, 1));
+        return { radius: 1 + 0.28 * (1 - p), lift: 0 };
+      }
+      return { radius: 1, lift: 0 };
+    };
+
+    const advance = (s, dt, now) => {
+      if (!state.introDone && readyRef.current) {
+        if (!state.intro) {
+          if (s.intro === 'none') state.introDone = true;
+          else state.intro = { type: s.intro, start: now };
+        }
+        if (state.intro && now - state.intro.start >= INTRO_LENGTH[state.intro.type]) {
+          state.intro = null;
+          state.introDone = true;
+        }
+      }
+
+      const paused = (s.pauseOnHover && state.hover) || state.drag || now < state.holdUntil;
+      const cruise = s.autoplay === 'drift' && !paused && !state.intro ? s.speed * state.dir : 0;
+      let busy = Boolean(state.intro) || state.drag;
+
+      if (state.drag || state.intro) {
+        state.velocity = state.drag ? state.velocity : 0;
+      } else if (state.target !== null) {
+        let remaining = dt;
+        const damping = 2 * Math.sqrt(SPRING);
+        while (remaining > 0) {
+          const h = Math.min(remaining, 1 / 240);
+          const accel = SPRING * (state.target - state.angle) - damping * state.velocity;
+          state.velocity += accel * h;
+          state.angle += state.velocity * h;
+          remaining -= h;
+        }
+        if (Math.abs(state.target - state.angle) < 0.004 && Math.abs(state.velocity) < 0.03) {
+          state.angle = state.target;
+          state.velocity = 0;
+          state.target = null;
+        }
+        busy = true;
+      } else {
+        const tau = 0.18 + s.momentum * 1.5;
+        state.velocity += (cruise - state.velocity) * (1 - Math.exp(-dt / tau));
+        state.angle += state.velocity * dt;
+        if (cruise === 0 && s.snap && Math.abs(state.velocity) < SETTLE_SPEED) {
+          state.target = nearest(state.angle);
+        }
+        busy = busy || cruise !== 0 || Math.abs(state.velocity) > 0.01 || state.target !== null;
+      }
+
+      if (s.autoplay === 'step' && !paused && !state.intro && state.introDone) {
+        if (!state.stepAt) state.stepAt = now + s.interval * 1000;
+        if (now >= state.stepAt) {
+          state.target = (state.target ?? nearest(state.angle)) + s.step * state.dir;
+          state.stepAt = now + s.interval * 1000;
+        }
+        busy = true;
+      } else {
+        state.stepAt = 0;
+      }
+
+      if (now < state.holdUntil) busy = true;
+
+      const ease = 1 - Math.exp(-dt / 0.35);
+      const aimYaw = state.pointer.inside ? state.pointer.x * s.parallax * 9 : 0;
+      const aimPitch = state.pointer.inside ? -state.pointer.y * s.parallax * 6 : 0;
+      state.yaw += (aimYaw - state.yaw) * ease;
+      state.pitch += (aimPitch - state.pitch) * ease;
+      if (Math.abs(aimYaw - state.yaw) > 0.01 || Math.abs(aimPitch - state.pitch) > 0.01) busy = true;
+
+      return busy;
+    };
+
+    const render = (s, now) => {
+      const elapsed = state.intro ? now - state.intro.start : 0;
+      const swell = 1 + s.stretch * 0.12 * Math.min(1, Math.abs(state.velocity) / 420);
+      let spinOffset = 0;
+      if (state.intro?.type === 'spin') {
+        const p = easeOut(clamp(elapsed / INTRO_LENGTH.spin, 0, 1));
+        spinOffset = -300 * state.dir * (1 - p);
+      } else if (state.intro?.type === 'assemble') {
+        const p = easeOut(clamp(elapsed / INTRO_LENGTH.assemble, 0, 1));
+        spinOffset = -32 * state.dir * (1 - p);
+      }
+      const angle = state.angle + spinOffset;
+      const R = s.radius * swell;
+
+      if (s.axis === 'x') {
+        camera.style.transform = `translate3d(0, 0, ${-R}px) rotateY(${s.tilt + state.yaw}deg) rotateX(${state.pitch}deg)`;
+        ring.style.transform = `rotateX(${-angle}deg)`;
+      } else if (s.layout.inward) {
+        camera.style.transform = `translate3d(0, 0, ${s.perspective - 1}px) rotateX(${s.tilt + state.pitch}deg) rotateY(${state.yaw}deg)`;
+        ring.style.transform = `rotateY(${angle}deg)`;
+      } else {
+        camera.style.transform = `translate3d(0, 0, ${-R}px) rotateX(${s.tilt + state.pitch}deg) rotateY(${state.yaw}deg)`;
+        ring.style.transform = `rotateY(${angle}deg)`;
+      }
+
+      for (let index = 0; index < s.count; index++) {
+        const card = cardRefs.current[index];
+        if (!card) continue;
+        const base = index * s.step;
+        const mod = introCard(elapsed, base);
+        const r = R * mod.radius;
+        let transform;
+        if (s.axis === 'x') {
+          transform = `rotateX(${-base}deg) translateZ(${r}px)`;
+        } else if (s.layout.inward) {
+          transform = `rotateY(${base}deg) translateZ(${-r}px)`;
+        } else {
+          transform = `rotateY(${base}deg) translateZ(${r}px)`;
+          if (s.layout.billboard) transform += ` rotateY(${-(base + angle)}deg)`;
+        }
+        if (mod.lift) transform += s.axis === 'x' ? ` translateX(${mod.lift}px)` : ` translateY(${mod.lift}px)`;
+        card.style.transform = transform;
+
+        const world = wrap(base + angle);
+        const facing = Math.cos(world * TO_RAD);
+        if (s.layout.inward) card.style.visibility = Math.abs(world) > 86 ? 'hidden' : '';
+        const fade = s.depthFade * Math.pow((1 - facing) / 2, 1.25);
+        card.style.setProperty('--cc-depth', fade.toFixed(3));
+      }
+
+      const index = ((Math.round(-state.angle / s.step) % s.count) + s.count) % s.count || 0;
+      if (index !== activeRef.current) {
+        activeRef.current = index;
+        setActive(index);
+        onChangeRef.current?.(index);
+      }
+    };
+
+    const frame = now => {
+      raf = 0;
+      const s = settingsRef.current;
+      const dt = state.last ? Math.min((now - state.last) / 1000, 0.05) : 1 / 60;
+      state.last = now;
+      const busy = advance(s, dt, now);
+      render(s, now);
+      if (busy && visible && !document.hidden) raf = requestAnimationFrame(frame);
+      else state.last = 0;
+    };
+
+    const wake = () => {
+      if (!raf && visible && !document.hidden) raf = requestAnimationFrame(frame);
+    };
+    wakeRef.current = wake;
+
+    const onVisibility = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+        state.last = 0;
+      } else wake();
+    };
+
+    const resize = new ResizeObserver(() => {
+      measure();
+      wake();
+    });
+    resize.observe(root);
+
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (visible) wake();
+      else {
+        cancelAnimationFrame(raf);
+        raf = 0;
+        state.last = 0;
+      }
+    });
+    io.observe(root);
+
+    const onWheel = event => {
+      const s = settingsRef.current;
+      if (!s.draggable) return;
+      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : 0;
+      if (!delta) return;
+      event.preventDefault();
+      const perPixel = 180 / (Math.PI * s.radius * state.fit);
+      state.target = null;
+      state.angle -= delta * perPixel * (s.layout.inward ? -1 : 1);
+      state.velocity = -delta * perPixel * (s.layout.inward ? -1 : 1) * 30;
+      state.holdUntil = performance.now() + 1600;
+      clearTimeout(state.wheelTimer);
+      state.wheelTimer = setTimeout(() => {
+        if (settingsRef.current.snap) state.target = nearest(state.angle + state.velocity * 0.12);
+        wake();
+      }, 140);
+      wake();
+    };
+    root.addEventListener('wheel', onWheel, { passive: false });
+    document.addEventListener('visibilitychange', onVisibility);
+
+    measure();
+    render(settingsRef.current, performance.now());
+    wake();
+
+    return () => {
+      cancelAnimationFrame(raf);
+      resize.disconnect();
+      io.disconnect();
+      clearTimeout(state.wheelTimer);
+      root.removeEventListener('wheel', onWheel);
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    measureRef.current();
+    wakeRef.current();
+  }, [radius, cardW, cardH, tiltValue, perspective, preset, captions, count]);
+
+  useEffect(() => {
+    wakeRef.current();
+  });
+
+  const focusIndex = useCallback(index => {
+    const state = stateRef.current;
+    const s = settingsRef.current;
+    let target = -index * s.step;
+    target += 360 * Math.round((state.angle - target) / 360);
+    state.target = target;
+    state.holdUntil = performance.now() + 2800;
+    wakeRef.current();
+  }, []);
+
+  const stepBy = useCallback(delta => {
+    const state = stateRef.current;
+    const s = settingsRef.current;
+    const base = state.target ?? Math.round(state.angle / s.step) * s.step;
+    state.target = base - delta * s.step * (s.layout.inward ? -1 : 1);
+    state.holdUntil = performance.now() + 2800;
+    wakeRef.current();
+  }, []);
+
+  const updatePointer = event => {
+    const rect = rootRef.current.getBoundingClientRect();
+    const pointer = stateRef.current.pointer;
+    pointer.x = clamp(((event.clientX - rect.left) / rect.width) * 2 - 1, -1, 1);
+    pointer.y = clamp(((event.clientY - rect.top) / rect.height) * 2 - 1, -1, 1);
+  };
+
+  const handlePointerDown = event => {
+    const state = stateRef.current;
+    state.suppressClick = false;
+    if (!draggable || event.button !== 0) return;
+    state.press = {
+      id: event.pointerId, x: event.clientX, y: event.clientY, angle: state.angle, moved: false, origin: 0,
+      samples: [{ time: performance.now(), angle: state.angle }]
+    };
+  };
+
+  const handlePointerMove = event => {
+    const state = stateRef.current;
+    if (event.pointerType === 'mouse') {
+      state.pointer.inside = true;
+      updatePointer(event);
+    }
+    const press = state.press;
+    if (!press || press.id !== event.pointerId) {
+      wakeRef.current();
+      return;
+    }
+    const s = settingsRef.current;
+    const delta = s.axis === 'x' ? event.clientY - press.y : event.clientX - press.x;
+    const cross = s.axis === 'x' ? event.clientX - press.x : event.clientY - press.y;
+    if (!press.moved) {
+      if (Math.abs(delta) < DRAG_THRESHOLD) return;
+      if (Math.abs(cross) > Math.abs(delta) * 1.2 && event.pointerType !== 'mouse') {
+        state.press = null;
+        return;
+      }
+      press.moved = true;
+      press.origin = delta;
+      state.drag = true;
+      state.target = null;
+      state.velocity = 0;
+      setDragging(true);
+      try { rootRef.current.setPointerCapture(event.pointerId); } catch {}
+    }
+    const perPixel = 180 / (Math.PI * s.radius * state.fit);
+    state.angle = press.angle + (delta - press.origin) * perPixel * (s.layout.inward ? -1 : 1);
+    const now = performance.now();
+    press.samples.push({ time: now, angle: state.angle });
+    while (press.samples.length > 2 && now - press.samples[0].time > 110) press.samples.shift();
+    wakeRef.current();
+  };
+
+  const releasePointer = event => {
+    const state = stateRef.current;
+    const press = state.press;
+    if (!press || press.id !== event.pointerId) return;
+    state.press = null;
+    if (!press.moved) return;
+    state.drag = false;
+    setDragging(false);
+    state.suppressClick = true;
+    const s = settingsRef.current;
+    const first = press.samples[0];
+    const last = press.samples[press.samples.length - 1];
+    const span = (last.time - first.time) / 1000;
+    const velocity = span > 0.008 ? clamp((last.angle - first.angle) / span, -1400, 1400) : 0;
+    state.velocity = velocity;
+    if (Math.abs(velocity) > 60) state.dir = Math.sign(velocity);
+    const coasting = s.autoplay === 'drift' && !(s.pauseOnHover && state.hover && event.pointerType === 'mouse');
+    if (s.snap && !coasting) {
+      const tau = 0.18 + s.momentum * 1.5;
+      state.target = Math.round((state.angle + velocity * tau * 0.55) / s.step) * s.step;
+    }
+    wakeRef.current();
+  };
+
+  const handlePointerEnter = event => {
+    if (event.pointerType !== 'mouse') return;
+    stateRef.current.hover = true;
+    wakeRef.current();
+  };
+
+  const handlePointerLeave = event => {
+    const state = stateRef.current;
+    if (event.pointerType === 'mouse') {
+      state.hover = false;
+      state.pointer.inside = false;
+    }
+    wakeRef.current();
+  };
+
+  const handleClick = event => {
+    const state = stateRef.current;
+    if (state.suppressClick) {
+      state.suppressClick = false;
+      return;
+    }
+    const card = event.target.closest?.('[data-cc-index]');
+    if (!card) return;
+    const index = Number(card.getAttribute('data-cc-index'));
+    if (focusOnClick) focusIndex(index);
+    onItemClick?.(list[index], index);
+  };
+
+  const handleKeyDown = event => {
+    const forward = axis === 'x' ? 'ArrowDown' : 'ArrowRight';
+    const backward = axis === 'x' ? 'ArrowUp' : 'ArrowLeft';
+    if (event.key === forward) stepBy(1);
+    else if (event.key === backward) stepBy(-1);
+    else if (event.key === 'Home') focusIndex(0);
+    else if (event.key === 'End') focusIndex(count - 1);
+    else if (event.key === 'Enter' || event.key === ' ') onItemClick?.(list[activeRef.current], activeRef.current);
+    else return;
+    event.preventDefault();
+  };
+
+  const current = list[active] || list[0];
+
+  const renderTile = (item, tile, back) => {
+    const strip = back ? tile.total - 1 - tile.index : tile.index;
+    const first = strip === 0;
+    const last = strip === tile.total - 1;
+    const r = 'var(--cc-radius)';
+    const frameRadius =
+      axis === 'x'
+        ? `${first ? r : 0} ${first ? r : 0} ${last ? r : 0} ${last ? r : 0}`
+        : `${first ? r : 0} ${last ? r : 0} ${last ? r : 0} ${first ? r : 0}`;
+    const offset = back ? along - tile.end : tile.start;
+    const size = tile.size;
+    const box =
+      axis === 'x'
+        ? { left: -cardW / 2, top: -size / 2, width: cardW, height: size }
+        : { left: -size / 2, top: -cardH / 2, width: size, height: cardH };
+    const photoStyle =
+      axis === 'x'
+        ? { left: 0, top: -offset, width: cardW, height: cardH }
+        : { left: -offset, top: 0, width: cardW, height: cardH };
+    const flip = axis === 'x' ? ' rotateX(180deg)' : ' rotateY(180deg)';
+    return (
+      <div
+        key={`${back ? 'b' : 'f'}${tile.index}`}
+        className="circular-carousel__tile"
+        style={{ ...box, transform: tile.move + (back ? flip : '') }}
+        aria-hidden="true"
+      >
+        <div className="circular-carousel__frame" style={{ height: axis === 'x' ? size : cardH, borderRadius: frameRadius }}>
+          <img className="circular-carousel__photo" src={item.src} alt="" draggable={false} decoding="async" style={photoStyle} />
+          {back && <div className="circular-carousel__inner" />}
+          <div className="circular-carousel__shade" />
+        </div>
+      </div>
+    );
+  };
+
+  if (!count) return null;
+
+  return (
+    <div
+      ref={rootRef}
+      className={`circular-carousel ${className}`.trim()}
+      style={{ ...style, '--cc-fade': fadeColor, '--cc-radius': `${Math.max(0, cornerRadius)}px`, '--cc-inner': (1 - clamp(innerShade, 0, 1)).toFixed(3) }}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Galerie salonu Be Beauty"
+      tabIndex={0}
+      data-axis={axis}
+      data-shape={shape}
+      data-ready={ready ? '' : undefined}
+      data-draggable={draggable ? '' : undefined}
+      data-dragging={dragging ? '' : undefined}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={releasePointer}
+      onPointerCancel={releasePointer}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+    >
+      <div className="circular-carousel__view">
+        <div ref={stageRef} className="circular-carousel__stage">
+          <div ref={cameraRef} className="circular-carousel__camera">
+            <div ref={ringRef} className="circular-carousel__ring">
+              {list.map((item, index) => (
+                <div
+                  key={index}
+                  ref={element => { cardRefs.current[index] = element; }}
+                  className="circular-carousel__card"
+                  data-cc-index={index}
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label={`${item.title || item.alt || `Fotka ${index + 1}`}, ${index + 1} z ${count}`}
+                >
+                  {tiles.map(tile => renderTile(item, tile, false))}
+                  {layout.backfaces && tiles.map(tile => renderTile(item, tile, true))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      {captions && current && (
+        <div className="circular-carousel__caption" aria-hidden="true">
+          <span key={active} className="circular-carousel__title">
+            {current.title || current.alt}
+            {current.subtitle && <span className="circular-carousel__subtitle">{current.subtitle}</span>}
+          </span>
+          <span className="circular-carousel__count">
+            <Digits value={active + 1} />
+            <span className="circular-carousel__slash">/</span>
+            <span>{String(count).padStart(2, '0')}</span>
+          </span>
+        </div>
+      )}
+      <div className="circular-carousel__live" aria-live="polite" aria-atomic="true">
+        {`${(current && (current.title || current.alt)) || ''}, ${active + 1} z ${count}`}
+      </div>
+    </div>
+  );
+};
+
+// Reálné fotky ze Salon Be Beauty (stažené lokálně z salon-be-beauty7.webnode.cz)
+const salonGalleryItems = [
+  { src: 'images/gallery-atmosfera.jpg', alt: 'Atmosféra salonu Be Beauty', title: 'Salon Be Beauty', subtitle: 'Atmosféra' },
+  { src: 'images/gallery-vizaz-editorial.jpg', alt: 'Editorialové líčení v přírodě', title: 'Vizáž', subtitle: 'Editorial' },
+  { src: 'images/gallery-promena.jpg', alt: 'Proměna s jemným glam líčením', title: 'Proměna', subtitle: 'Styling' },
+  { src: 'images/gallery-maderoterapie.jpg', alt: 'Maderoterapie obličeje dřevěnými nástroji', title: 'Maderoterapie', subtitle: 'Ošetření' },
+  { src: 'images/gallery-tehotenske-studio.jpg', alt: 'Těhotenské fotografie v bílých šatech', title: 'Těhotenské focení', subtitle: 'Studio' },
+  { src: 'images/gallery-tehotenske-korunka.jpg', alt: 'Těhotenské fotografie s korunkou', title: 'Těhotenské focení', subtitle: 'Vizáž & účes' },
+  { src: 'images/gallery-tehotenske-vinec.jpg', alt: 'Těhotenské fotografie s květinovým věncem', title: 'Těhotenské focení', subtitle: 'Portrét' },
+  { src: 'images/gallery-tehotenske-priroda.jpg', alt: 'Těhotenské fotografie v přírodě', title: 'Těhotenské focení', subtitle: 'Příroda' }
+];
+
+const ccRootEl = document.getElementById('cc-root');
+if (ccRootEl) {
+  ReactDOM.createRoot(ccRootEl).render(
+    <CircularCarousel
+      items={salonGalleryItems}
+      preset="cylinder"
+      intro="rise"
+      cardWidth={210}
+      aspectRatio={0.72}
+      gap={20}
+      speed={9}
+      cornerRadius={18}
+      fadeColor="#ffffff"
+      captions
+    />
+  );
+}
+</script>
+
+</body>
+</html>
